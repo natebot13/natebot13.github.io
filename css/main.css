@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'moderna';
+  src:
+    url('../assets/fonts/moderna.ttf');
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-color:#F4B5FF;
+  max-height: 100vh;
+  font-family: sans-serif;
+  background-image: url('../assets/bg.png');
+  background-size: contain;
+  background-repeat: repeat-x;
+  image-rendering: pixelated;
+}
+
+@keyframes slide {
+  0% {background-position: 0% 100%;}
+  100% {background-position: 100% 100%;}
+}
+
+div.clouds {
+  background-image: url('../assets/clouds.png');
+  background-repeat: repeat-x;
+  image-rendering: pixelated;
+  background-size: 50%;
+  background-position: bottom;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  animation: slide 30s linear 0s infinite normal;
+
+}
+
+div.centered {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+h1.title {
+  font-family: "press start 2p", sans-serif;
+  font-size: 30px;
+  color: #e3f9ff;
+}
+
+h2.subtitle {
+  font-family: 'open sans Condensed', sans-serif;
+  font-size: 20px;
+  font-weight:bold;
+  letter-spacing: 2.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #d9e8f8;
+}
+
+input {
+  outline: none;
+}
+
+input.enterNameField {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-family: "open sans condensed", sans-serif;
+  font-size: 15px;
+  placeholder color: #d9e8f8;
+  padding: 10px 35px 10px 35px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  border: none;
+
+}
+
+h2.enterBtn {
+  display: inline-block;
+  width: 200px;
+  padding: 15px 30px;
+  font-size: 13px;
+  color: #FFE279;
+  border: 2px solid #FFE279;
+  font-family: "press start 2p", sans-serif;
+  margin-bottom: 100px;
+
+}
+
+.enterBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.enterBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.enterBtn:hover span {
+  padding-right: 25px;
+}
+
+.enterBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.animated.fadeIn {
+  -webkit-animation-duration: 5s;
+}

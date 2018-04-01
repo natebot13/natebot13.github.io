@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'moderna';
+  src:
+    url('../assets/fonts/moderna.ttf');
+}
+
+html, body {
+  margin: 0px;
+}
+
+body {
+
+  overflow: hidden;
+  background-color:#F4B5FF;
+  max-height: 100vh;
+  font-family: sans-serif;
+  background-image: url('../assets/bg2.png');
+  background-repeat: repeat-x;
+  image-rendering: pixelated;
+  background-size: 40% auto;
+}
+
+@keyframes rotate {
+  0% {transform: rotateZ(0deg) translateX(-100%);}
+  100% {transform: rotateZ(360deg) translateX(-100%);}
+}
+
+.centered {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+img.sun {
+  z-index: -1;
+  position: absolute;
+  width: 400px;
+  image-rendering: pixelated;R
+  animation: rotate 100s linear 0s infinite normal;
+  top: 90%;
+  left: 40%;
+}
+
+div.city {
+  background-image: url('../assets/city.png');
+  background-repeat: repeat-x;
+  image-rendering: pixelated;
+  background-size: 40%;
+  background-position: bottom;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+div.topNav {
+  position: fixed;
+  text-align: center;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 200px;
+  width: 100vw;
+}
+
+.topNav img {
+  width: 100px;
+  margin: 0 50px 0 50px;
+}
+
+.topNav a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "press start 2p", sans-serif;
+  font-size: 11px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.logoutBtn {
+  position: absolute;
+  display: inline-block;
+  float: right;
+  right: 20px;
+}
+
+a:hover {
+  color: #8CFDFF;
+}
+
+
+.scroller {
+  position: absolute;
+  overflow-y: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.scroll-item {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  transition: 250ms;
+  margin: 50px;
+  flex: 0 0 auto;
+}
+
+.scroll-item .image {
+  margin: 15px;
+  height: 250px;
+  background-color: black;
+  /*specified by js: background-image*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

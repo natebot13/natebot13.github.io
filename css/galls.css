@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'moderna';
+  src:
+    url('../assets/fonts/moderna.ttf');
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-color:#F4B5FF;
+  max-height: 100vh;
+  font-family: sans-serif;
+  background-image: url('../assets/bg3.png');
+  background-size: contain;
+  background-size: 100%;
+  background-repeat: repeat-x;
+  image-rendering: pixelated;
+}
+
+@keyframes fade {
+  0% {opacity: 1}
+  50% {opacity: .75}
+  100% {opacity: .25}
+}
+
+div.stars {
+  background-image: url('../assets/stars.png');
+  opacity: 0.5;
+  background-repeat: repeat-x repeat-y ;
+  image-rendering: pixelated;
+  background-size: 30%;
+  background-position: bottom;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  animation: fade 3s linear 0s infinite normal;
+}
+
+div.displayPhotos {
+  margin-top: 200px;
+}
+
+div.poloroid {
+  display: inline-block;
+  background-color: white;
+  margin: 50px;
+  width: 300px;
+  height:400px;
+}
+
+div.poloroid .image {
+  margin:15px;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.topNav {
+  position: fixed;
+  text-align: center;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 200px;
+  width: 100vw;
+}
+
+.topNav img {
+  width: 100px;
+  margin: 0 50px 0 50px;
+}
+
+.topNav a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "press start 2p", sans-serif;
+  font-size: 11px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.logoutBtn {
+  position: absolute;
+  display: inline-block;
+  float: right;
+  right: 20px;
+}
+
+a:hover {
+  color: #8CFDFF;
+}
